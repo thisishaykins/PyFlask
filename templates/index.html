@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Home Page!</h1>
+    <p>Hello! <strong>{{content}}</strong></p>
+    <p>Dynamic Data from App <strong>{{r}}</strong> </p>
+
+    <!-- Python code below in HTML -->
+    <h2>Python within Page</h2>
+    {% for x in range(10) %}
+        {% if x % 2 == 1 %}
+            <p>{{x}}</p>
+        {% endif %}
+    {% endfor %}
+
+    <h2>User from Apps</h2>
+    <ul>
+        {% for y in users %}
+            <li>{{y}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
