@@ -10,3 +10,10 @@ A Basic Flask(Python Framework) App with Basic functionalities and usages of it'
     - <code>export FLASK_APP=app.py</code>
     - <code>flask run</code>
 - Enjoy the rest...
+
+## Basic Flask Crud App & Authentication
+- Run the python app/file "database.py" using <code>python "database.py"</code> or <code>python database.py</code>
+- Or using the Flask Framework to run app using the process below
+    - <code>export FLASK_APP=app.py</code>
+    - <code>flask run</code>
+- Enjoy a basic crud-auth flask app...
