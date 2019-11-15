@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}View All Users{% endblock title %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% for user in users %}
+        <p>
+            <strong>Name:</strong> {{user.name}}, <br/>
+            <strong>Email:</strong> {{user.email}}, <br/>
+            <strong>Phone:</strong> {{user.phone}}, <br/>
+            <strong>Password:</strong> {{user.passkey}} <br/>
+            <a href="?delete_email={{user.email}}" class="btn btn-danger">Delete</a>
+        </p>
+    {% endfor %}
+{% endblock content %}

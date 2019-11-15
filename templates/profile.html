@@ -8,13 +8,34 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    <div class="col-md-12">Welcome {{user}} </div>
+    <p class="mt-3">Welcome {{profile.name}} </p>
+    <h3 class="mt-5">My Profile</h3>
+    <p>
+        <strong>Name:</strong> {{profile.name}}, <br/>
+        <strong>Email:</strong> {{profile.email}}, <br/>
+        <strong>Phone:</strong> {{profile.phone}}, <br/>
+        <strong>Password:</strong> {{profile.passkey}} <br/>
+    </p>
 
-    <form action="#" method="post">
-        <input type="text" name="name" id="name" placeholder="Full Name" value="{{name if name}}">
-        <input type="email" name="email" id="email" placeholder="Email Adress" value="{{email if email}}">
-        <input type="tel" name="phone" id="phone" placeholder="Phone Number" value="{{phone if phone}}">
-        <button type="submit">Submit</button>
+    <form class="form mt-5" action="#" method="POST">
+        <h3 class="mt-5">Update Profile</h3>
+        <div class="form-group">
+            <label for="exampleInputAlias">Full Name</label>
+            <input type="text" name="alias" class="form-control" id="exampleInputAlias" aria-describedby="aliasHelp" placeholder="Enter Full Name" value="{{profile.name}}">
+            <small id="aliasHelp" class="form-text text-muted">Please update Your Full name...</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputphone">Phone Number</label>
+            <input type="tel" name="phone" class="form-control" id="exampleInputphone" aria-describedby="phoneHelp" placeholder="Enter phone number" value="{{profile.phone}}">
+            <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input disabled type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{profile.email}}">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <hr/>
+        <button type="submit" class="btn btn-primary">Update Profile</button>
     </form>
 
 {% endblock content %}
