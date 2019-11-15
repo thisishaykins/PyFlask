@@ -77,7 +77,7 @@ def register():
             flash("Already Logged In!")
             return redirect(url_for("profile"))
 
-        return render_template("register.html")
+    return render_template("register.html")
 
 
 @app.route("/login", methods=["POST", "GET"])
